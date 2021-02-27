@@ -1,7 +1,13 @@
-## Introduction
-This repo is meant as a personal #vlang playground.
+# Introduction
+This repo is meant as a little comparison between NodeJS + Express and the V language with its own web framework Vweb.
 
-## Usage
-After you've installed V locally (and added it to your PATH variable), you simply run:
+## Testing
+There are currently 2 endpoints defined:
+- `/`
+- `/products`
 
-`v run .\src\main.v`
+### V
+Run `v run .\src\v\main.v`
+
+### JS / NodeJS
+Run `node .\src\js\main.js`

@@ -1,7 +1,8 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 const port = 14788;
 
+// Start the web server
 app.listen(port, () => console.log(`[Express] Running app on http://localhost:${port}`));
 
 /**

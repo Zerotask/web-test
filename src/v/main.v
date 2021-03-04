@@ -20,9 +20,11 @@ fn main() {
 	vweb.run<App>(port)
 }
 
-/*
-* @endpoint GET /
-*/
+/**
+ * A simple JSON response
+ * 
+ * @endpoint GET /products
+ */
 pub fn (mut app App) index() vweb.Result {
 	return app.text('Hello from V!')
 }
@@ -39,3 +41,14 @@ pub fn (mut app App) products() vweb.Result {
 
 	return app.json(json.encode(products))
 }
+
+/**
+ * A simple addition
+ * 
+ * @endpoint GET /calculators/add/:value1/:value2
+ */
+ ['/calculators/add/:value1/:value2']
+ pub fn (mut app App) add_two_values(value1 int, value2 int) vweb.Result {
+	 result := value1 + value2
+	 return app.json(result.str())
+ }

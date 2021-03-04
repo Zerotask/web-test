@@ -13,7 +13,9 @@ app.get('/', (request, response) => {
 });
 
 /**
- * @endpoint GET /
+ * A simple JSON response
+ * 
+ * @endpoint GET /products
  */
 app.get('/products', (request, response) => {
     // With TS you could use an interface instead of V's struct
@@ -25,3 +27,12 @@ app.get('/products', (request, response) => {
 
     response.json(products);
 });
+
+/**
+ * A simple addition
+ * 
+ * @endpoint GET /calculators/add/:value1/:value2
+ */
+app.get('/calculators/add/:value1/:value2', (request, response) => {
+    response.json(parseInt(request.params.value1) + parseInt(request.params.value2));
+})

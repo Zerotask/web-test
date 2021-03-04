@@ -52,3 +52,15 @@ pub fn (mut app App) products() vweb.Result {
 	 result := value1 + value2
 	 return app.json(result.str())
  }
+
+/**
+ * A simple multiplication
+ * 
+ * @endpoint POST /calculators/add/:value1/:value2
+ */
+ ['/calculators/multiply/:value1/:value2']
+ [post]
+ pub fn (mut app App) multiply_two_values(value1 int, value2 int) vweb.Result {
+	 result := value1 * value2
+	 return app.json(result.str())
+ }

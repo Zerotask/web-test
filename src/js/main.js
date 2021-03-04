@@ -36,3 +36,12 @@ app.get('/products', (request, response) => {
 app.get('/calculators/add/:value1/:value2', (request, response) => {
     response.json(parseInt(request.params.value1) + parseInt(request.params.value2));
 })
+
+/**
+ * A simple multiplication
+ * 
+ * @endpoint GET /calculators/multiply/:value1/:value2
+ */
+app.post('/calculators/multiply/:value1/:value2', (request, response) => {
+    response.json(parseInt(request.params.value1) * parseInt(request.params.value2));
+})
